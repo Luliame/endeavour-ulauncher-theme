@@ -2,17 +2,17 @@
  * This is a edited version of the theme below to match EndeavourOS i3WM colors:
  * https://github.com/lifeofcoding/transparent-blue-accent-ulauncher-theme
  */
-@define-color on-violet #43034B;
-@define-color on-darkblue  #08052b; 
-@define-color on-lightblue  #5294e2; 
-@define-color on-urgentred  #e53935;
-@define-color on-white  #ffffff;
-@define-color on-black  #000000;
-@define-color on-purple #e345ff;
+@define-color on-lightviolet #af87af;
+@define-color on-secondarypurple #6b556b;
+@define-color on-darkblue #08052b; 
+@define-color on-lightblue #5294e2; 
+@define-color on-urgentred #e53935;
+@define-color on-white #ffffff;
+@define-color on-black #000000;
 @define-color on-darkgrey #383c4a;
-@define-color on-grey  #b0b5bd;
+@define-color on-grey #b0b5bd;
 @define-color on-lightgrey #8b8b8b;
-@define-color on-yellowbrown    #e1b700;
+@define-color on-yellowbrown #e1b700;
 
 /**
  * Ulauncher theme modified from the default dark theme
@@ -21,36 +21,36 @@
 /**
  * App Window
  */
-@define-color bg_color rgba(45, 49, 58, 0.95);
+@define-color bg_color rgba(45, 49, 58, 0.80);
 @define-color window_bg @bg_color;
 @define-color window_border_color @on-lightblue;
-@define-color prefs_backgroud @on-grey;
+@define-color prefs_backgroud @on-lightviolet;
 
 /**
  * Input
  */
 @define-color selected_bg_color @on-lightgrey;
 @define-color selected_fg_color @on-grey;
-@define-color input_color @on-lightgrey;
+@define-color input_color @on-white;
 @define-color caret_color darker(@input_color); 
 
 /**
  * Result items
  */
+@define-color item_box_selected @on-lightviolet;
 @define-color item_name @on-white;
-@define-color item_text @on-lightgrey;
-@define-color item_box_selected @on-violet;
-@define-color item_text_selected @on-white;
 @define-color item_name_selected @on-white;
+@define-color item_text @on-lightgrey;
+@define-color item_text_selected @on-white;
 @define-color item_shortcut_color @on-white;
-@define-color item_shortcut_shadow darker(@bg_color);
 @define-color item_shortcut_color_sel @on-white;
+@define-color item_shortcut_shadow darker(@bg_color);
 @define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {
     background-color: @window_bg;
     border-color: @window_border_color;
-    border-width: 1px;
+    border-width: 0px;
     border-radius: 0px;
 }
 
@@ -64,7 +64,7 @@
 .input *:selected,
 .input *:focus,
 *:selected:focus {
-    background-color: alpha (@selected_bg_color, 0.9);
+    background-color: alpha (@selected_bg_color, 0.8);
     color: @selected_fg_color;
 }
 
